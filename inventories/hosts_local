@@ -1,0 +1,12 @@
+all:
+  children:
+    jenkins:
+      children:
+        jenkins-server:
+          hosts:
+            cis00001.local
+              ansible_host: localhost
+              ansible_port: 52222
+              ansible_user: vagrant
+              ansible_private_key_file: './../../.ssh/private_key'
+              ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
