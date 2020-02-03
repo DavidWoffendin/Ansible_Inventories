@@ -1,0 +1,15 @@
+---
+groups:
+  tooling:
+    vms:
+      - name: "jenkins-iac"
+        hostname: "cis00001.local"
+        ports:
+          - host: 58080
+            guest: 8080
+            name: http
+          - host: 52222
+            guest: 22
+            name: ssh
+        cpus: 1
+        memory: 2048
