@@ -4,7 +4,7 @@ all:
       children:
         jenkins-server:
           hosts:
-            cis00001.local
+            cis00001.local:
               ansible_host: localhost
               ansible_port: 52222
               ansible_user: vagrant
