@@ -1,0 +1,161 @@
+---
+jenkins_admin_password: 'Password321'
+jenkins_users:
+  - username: 'svc_jenkins'
+    password: '{{ jenkins_admin_password }}'
+jcasc_script_user: 'svc_jenkins'
+jcasc_script_password: '{{ jenkins_admin_password }}'
+jenkins_force_service_restart: no
+jenkins_plugin_timeout: 120
+jenkins_has_internet_access: yes
+jenkins_install_from_rpm: no
+jenkins_version: '2.204.2'
+jenkins_plugins:
+  - name: trilead-api
+    version: '1.0.5'
+  - name: cloudbees-folder
+    version: '6.11.1'
+  - name: jdk-tool
+    version: '1.4'
+  - name: script-security
+    version: '1.70'
+  - name: command-launcher
+    version: '1.4'
+  - name: antisamy-markup-formatter
+    version: '1.8'
+  - name: structs
+    version: '1.20'
+  - name: workflow-step-api
+    version: '2.22'
+  - name: token-macro
+    version: '2.10'
+  - name: bouncycastle-api
+    version: '2.18'
+  - name: build-timeout
+    version: '1.19.1'
+  - name: credentials
+    version: '2.3.1'
+  - name: plain-credentials
+    version: '1.7'
+  - name: ssh-credentials
+    version: '1.18.1'
+  - name: credentials-binding
+    version: '1.20'
+  - name: scm-api
+    version: '2.6.3'
+  - name: workflow-api
+    version: '2.39'
+  - name: timestamper
+    version: '1.10'
+  - name: workflow-support
+    version: '3.4'
+  - name: durable-task
+    version: '1.33'
+  - name: workflow-durable-task-step
+    version: '2.35'
+  - name: junit
+    version: '1.28'
+  - name: matrix-project
+    version: '1.14'
+  - name: resource-disposer
+    version: '0.14'
+  - name: ws-cleanup
+    version: '0.38'
+  - name: ant
+    version: '1.11'
+  - name: ace-editor
+    version: '1.1'
+  - name: jquery-detached
+    version: '1.2.1'
+  - name: workflow-scm-step
+    version: '2.10'
+  - name: workflow-cps
+    version: '2.80'
+  - name: workflow-job
+    version: '2.36'
+  - name: apache-httpcomponents-client-4-api
+    version: '4.5.10-2.0'
+  - name: display-url-api
+    version: '2.3.2'
+  - name: mailer
+    version: '1.30'
+  - name: workflow-basic-steps
+    version: '2.19'
+  - name: gradle
+    version: '1.36'
+  - name: pipeline-milestone-step
+    version: '1.3.1'
+  - name: jackson2-api
+    version: '2.10.2'
+  - name: pipeline-input-step
+    version: '2.11'
+  - name: pipeline-stage-step
+    version: '2.3'
+  - name: pipeline-graph-analysis
+    version: '1.10'
+  - name: pipeline-rest-api
+    version: '2.13'
+  - name: handlebars
+    version: '1.1.1'
+  - name: momentjs
+    version: '1.1.1'
+  - name: pipeline-stage-view
+    version: '2.13'
+  - name: pipeline-build-step
+    version: '2.11'
+  - name: pipeline-model-api
+    version: '1.5.1'
+  - name: pipeline-model-extensions
+    version: '1.5.1'
+  - name: jsch
+    version: '0.1.55.2'
+  - name: git-client
+    version: '3.1.1'
+  - name: git-server
+    version: '1.9'
+  - name: workflow-cps-global-lib
+    version: '2.15'
+  - name: branch-api
+    version: '2.5.5'
+  - name: workflow-multibranch
+    version: '2.21'
+  - name: authentication-tokens
+    version: '1.3'
+  - name: docker-commons
+    version: '1.16'
+  - name: docker-workflow
+    version: '1.21'
+  - name: pipeline-stage-tags-metadata
+    version: '1.5.1'
+  - name: pipeline-model-declarative-agent
+    version: '1.1.1'
+  - name: pipeline-model-definition
+    version: '1.5.1'
+  - name: lockable-resources
+    version: '2.7'
+  - name: workflow-aggregator
+    version: '2.6'
+  - name: github-api
+    version: '1.106'
+  - name: git
+    version: '4.1.1'
+  - name: github
+    version: '1.29.5'
+  - name: github-branch-source
+    version: '2.6.0'
+  - name: pipeline-github-lib
+    version: '1.0'
+  - name: mapdb-api
+    version: '1.0.9.0'
+  - name: subversion
+    version: '2.13.1'
+  - name: ssh-slaves
+    version: '1.31.1'
+  - name: matrix-auth
+    version: '2.5'
+  - name: pam-auth
+    version: '1.6'
+  - name: ldap
+    version: '1.21'
+  - name: email-ext
+    version: '2.68'
