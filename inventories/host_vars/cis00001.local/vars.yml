@@ -10,6 +10,17 @@ jenkins_plugin_timeout: 120
 jenkins_has_internet_access: yes
 jenkins_install_from_rpm: no
 jenkins_version: '2.204.2'
+jenkins_plugins_defaults:
+  - name: job-dsl
+    version: '1.76'
+  - name: structs
+    version: '1.20'
+  - name: script-security
+    version: '1.70'
+  - name: configuration-as-code
+    version: '1.35'
+  - name: configuration-as-code-support
+    version: '1.18'
 jenkins_plugins:
   - name: trilead-api
     version: '1.0.5'
