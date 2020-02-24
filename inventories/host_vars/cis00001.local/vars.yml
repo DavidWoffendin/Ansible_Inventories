@@ -3,3 +3,15 @@ jcasc_reload_configuration: yes
 git_username: 'jenkins_git_user'
 git_id: 'SSH_KEY_FOR_GIT'
 jenkins_force_service_restart: no
+jenkins_jobs: '{{ jenkins_pipeline_jobs | union(jenkins_freestyle_jobs) }}'
+jcasc_config:
+  jenkins:
+    systemMessage: | 
+      Welcome to the Jenkins Task Runner.
+      All configuration is managed from code 
+      Config can be found here - 
+      Deployment process can be found here - 
+    mode: NORMAL
+    numExecutors: 2
+    scmCheckoutRetryCount: 0
+    quietPeriod: 5
