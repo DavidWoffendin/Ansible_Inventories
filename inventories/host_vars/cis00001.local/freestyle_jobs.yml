@@ -1,0 +1,32 @@
+---
+jenkins_freestyle_jobs: 
+  - script: >
+      freeStyleJob('Test job') {
+        description('''Test Job
+
+        -> Jenkins to complete A x B = C
+
+        -> Jenkins to return C 
+
+        -> Ivanti to display C
+        ''')
+        parameters {
+          stringParam('A', '1', 'A')
+          stringParam('B', '2', 'B')
+          stringParam('H', 'H', 'H')
+          stringParam('I', 'I', 'I')          
+        }
+        steps {
+          shell(''' out=$( expr $A '*' $B )
+        echo $out
+
+        echo $out > output.txt
+        ''')
+        }
+        publishers {
+          archiveArtifacts {
+            pattern('output.txt')
+            defaultExcludes()
+          }
+        }
+      }

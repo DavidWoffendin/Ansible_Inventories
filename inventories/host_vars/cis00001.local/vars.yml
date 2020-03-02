@@ -6,6 +6,7 @@ jenkins_force_service_restart: no
 jenkins_jobs: '{{ jenkins_pipeline_jobs | union(jenkins_freestyle_jobs) }}'
 jcasc_config:
   jenkins:
+    globalNodeProperties: '{{ jenkins_enviroment }}'
     systemMessage: | 
       Welcome to the Jenkins Task Runner.
       All configuration is managed from code 
@@ -15,3 +16,9 @@ jcasc_config:
     numExecutors: 2
     scmCheckoutRetryCount: 0
     quietPeriod: 5
+    primaryView:
+      all:
+        name: "All Jobs"
+    views: '{{ jenkins_views }}'
+  credentials: '{{ jenkins_credentials }}'
+  jobs: 'jenkins_jobs'

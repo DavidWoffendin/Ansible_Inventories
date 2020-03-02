@@ -1,0 +1,13 @@
+---
+jenkins_views:
+  - all:
+      name: All Jobs
+  - list:
+      name: Management Jobs
+      includeRegex: '.*_Management'
+  - list:
+      name: Adhoc Jobs
+      includeRegex: '.*_Adhoc'
+  - list:
+      name: Scheduled Jobs
+      includeRegex: '.*_Scheduled'

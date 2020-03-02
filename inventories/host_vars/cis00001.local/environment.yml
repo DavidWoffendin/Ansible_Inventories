@@ -1,0 +1,6 @@
+---
+jenkins_enviroment:
+  - envVars:
+      env:     
+       - key: examplekey
+         value: example
