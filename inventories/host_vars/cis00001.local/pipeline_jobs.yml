@@ -1,7 +1,7 @@
 jenkins_pipeline_jobs:
   - script: >
       pipelineJob("Test_Pipeline_Job") {
-        displayName("Test job")
+        displayName("Test_job")
         definition {
           cpsScm {
             scm {
@@ -10,8 +10,8 @@ jenkins_pipeline_jobs:
                   url("git@github.com:DavidWoffendin/FYP_Playbooks.git")
                   credentials('{{ git_id }}')
                 }
-                branches("master")
-                scriptPath("test")
+                branches("*/master")
+                scriptPath("Jenkinsfile")
                 extensions { }
               }
             }

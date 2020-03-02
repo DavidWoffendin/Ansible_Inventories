@@ -21,4 +21,7 @@ jcasc_config:
         name: "All Jobs"
     views: '{{ jenkins_views }}'
   credentials: '{{ jenkins_credentials }}'
-  jobs: 'jenkins_jobs'
+  jobs: '{{ jenkins_jobs }}'
+  unclassified:
+    location:
+      url: 'http://localhost:58080/'
