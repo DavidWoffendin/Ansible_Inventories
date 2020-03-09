@@ -1,5 +1,4 @@
 ---
-jenkins_admin_password: 'Password321'
 jenkins_users:
   - username: 'svc_jenkins'
     password: '{{ jenkins_admin_password }}'

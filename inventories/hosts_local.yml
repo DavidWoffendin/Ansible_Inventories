@@ -10,3 +10,5 @@ all:
               ansible_user: vagrant
               ansible_private_key_file: './.vagrant/machines/jenkins-iac/virtualbox/private_key'
               ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  vars:
+    ansible_environment: vagrant
