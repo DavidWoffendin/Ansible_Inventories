@@ -4,17 +4,17 @@
 - hosts: jenkins-server
   pre_tasks:
     - include_vars:
-        dir: 'variables.vagrant/'
+        dir: './../variables.vagrant/'
       when:
         - ansible_environment is defined
         - ansible_environment == 'vagrant'
     - include_vars:
-        dir: 'variables.live/'
+        dir: './../variables.live/'
       when:
         - ansible_environment is defined
         - ansible_environment == 'live'
   roles:
-    - role: fyp-jenkins
+    - role: ./../FYP_Playbooks/fyp-jenkins
       become: yes
       tags:
         - jenkins
