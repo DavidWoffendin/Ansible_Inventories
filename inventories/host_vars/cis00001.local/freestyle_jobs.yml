@@ -8,7 +8,7 @@ jenkins_freestyle_jobs:
 
         -> Jenkins to return C 
 
-        -> Ivanti to display C
+        -> Jenkins to display C
         ''')
         parameters {
           stringParam('A', '1', 'A')
