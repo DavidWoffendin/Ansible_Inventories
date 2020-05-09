@@ -1,6 +1,6 @@
 jenkins_pipeline_jobs:
   - script: >
-      pipelineJob("Test_Pipeline_Job") {
+      pipelineJob("Test_Pipeline_Job_1") {
         displayName("Test_job")
         definition {
           cpsScm {
@@ -18,3 +18,42 @@ jenkins_pipeline_jobs:
           }
         }
       }
+  - script: >
+      pipelineJob("Test_Pipeline_Job_2") {
+        displayName("Test_job")
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url("git@github.com:DavidWoffendin/FYP_Playbooks.git")
+                  credentials('{{ git_id }}')
+                }
+                branches("*/master")
+                scriptPath("Jenkinsfile")
+                extensions { }
+              }
+            }
+          }
+        }
+      }
+  - script: >
+      pipelineJob("Test_Pipeline_Job_3") {
+        displayName("Test_job")
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url("git@github.com:DavidWoffendin/FYP_Playbooks.git")
+                  credentials('{{ git_id }}')
+                }
+                branches("*/master")
+                scriptPath("Jenkinsfile")
+                extensions { }
+              }
+            }
+          }
+        }
+      }
+      
